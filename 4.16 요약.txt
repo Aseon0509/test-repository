@@ -102,6 +102,245 @@ img코드는 종료코드가 없음!! img/쓰고 종결
 rowspan="합병할 행 갯수" !!!!!! ->세로로 합병됨
 colspan= "합병할 열 갯수" -> 가로로 합병됨
 
+-------------4/17 ----------------------------------------------------------------------------------
+멀티미디어 입력방식
+<audio>
+** 쓰는법
+    <audio controls autoplay>
+        <source src="old_pop.ogg" type="audio/ogg">
+        <source src="old_pop.mp3" type="audio/mp3"> -> 호환성을 높이기 위해 여러개 확장자 깔아놓음
+        <source src="old_pop.wav" type="audio/wav"> 
+        (소리 안나올때 쓸말 적기)
+    </audio>
+
+
+-> autoplay = 자동재생 (크롬은 막혀서 사용자가 설정한 url 이외에 막혀있음) 
+-> controls = 컨트롤박스 생성
+-> loop = 오디오 반복재생 (잘안함)
+-> preload = 사용자가 사용할 생각이 없더라도 오디오를 미리 다운로드함
+-> src = 재생할 오디오가 존재하는 url 지정
+-> volume = 오디오의 재생 볼륨을 설정한다(0.0~1.0까지)
+
+<video> 
+** 쓰는법
+ <video width="640" height="480" controls>
+        <source src="저장한 노래이름.mp4" type='video/mp4'>
+        <source src="저장한 노래이름.ogv"  type='video/ogg'> -> 호환성을 높이기 위해 여러개 확장자 깔아놓음
+        <p>Your user agent does not support HTML5.</p> -> 오디오와 동일
+  </video>
+
+-> 나머지 오디오와 동일, 추가만 적음
+-> muted = 비디오의 오디오 출력을 중지한다.
+-> src = 재생할 오디오가 존재하는 URL을 지정한다.
+-> width, height = 비디오 재생기의 너비와 높이를 나타낸다(오디오는 필요 ㄴㄴ>
+
+<iframe> -> 요새 안씀, 충돌 일어나거나 안정성이 떨어짐
+** 쓰는법
+    <iframe src="안에 넣고싶은 주소" width="600" height="420"></iframe>
+
+-->하이퍼링크 쓰는법  <a href="http://127.0.0.1:5501/2024.04.17/2_iframe.html" target="_parent(self)"
+      >하이퍼링크 누를만한 내용적기</a>
+
+span - 인라인요소(텍스트만잡음, 컨텐츠 없으면 높이 넓이 지정해줘도 자리차지 못함), 
+P, div - 블록요소(텍스트 길이와 상관없이 한 블록 전체를 잡음, width height 의미없음) --> 나중에 크기 잡을때 주의하기
+
+<div>
+** 쓰는법
+<div style="border: 3px solid(dotted 등등 넣고싶은 라인 적기) red;(원하는색상뒤에 ;넣기)"> 컨텐츠 </div>
+; 내용이 끝났음 표시
+
+<form>
+입력 데이터가 서버로 보내지는 양식
+** 쓰는법
+<form>
+    <input type="text" name="input"> --> method="post or get"도 포함되어야 하나 백도어 없어서 아직 의미 ㄴㄴ
+    <input type="submit">
+</form>
+
+<input>
+** 쓰는법
+<input type="button(입력필드 종류:text가 기본)" value="눌러보세요(버튼에 나타나는 내용)" name="button1(서버에 전달되는 이름!!!중요)">
+
+type 속성
+text : 텍스트를 입력할 수 있는 한 줄짜리 필드 생성
+** 
+<form>
+    (적고싶은거): <input type="text" name="name"><br>
+    학번: <input type="text" name="number" size="10">
+</form> 
+
+password : 비밀번호를 입력할 수 있는 한 줄짜리 필드 생성
+**
+<form>
+    패스워드: <input type="password" name="pass">
+</form> 
+
+radio : 라디오 버튼 생성 --> 하나만 선택 가능
+<form>
+    성별:
+    <input type="radio" name="gender" value="male“ >남성
+    <input type="radio" name="gender" value="female">여성
+</form>
+
+checkbox : 체크 박스 생성 --> 여러개 선택 가능
+<form>
+    과일 선택(내용): 
+    <input type="checkbox" name="fruits" value="apple" checked>Apple
+    <input type="checkbox" name="fruits" value="grape">Grape
+    <input type="checkbox" name="fruits" value="orange">Orange
+</form>
+
+file : 파일 이름을 입력하는 필드 생성
+reset : 초기화 버튼 생성, 버튼을 누르면 모든 입력 필드가 초기화된다.
+<form>
+    <input type="reset" value="초기화">
+</form>
+
+image : 이미지를 전송 버튼으로 만든다.
+<form>
+<input type="image" src="submit.png" alt="제출 버튼">
+</form>
+
+hidden : 사용자에게는 보이지 않지만 사용자가 제출버튼을 누르면 서버로 name, value가 전송된다.
+<input type="hidden" name="" value="">
+
+
+submit : 제출 버튼 생성
+<form>
+    <input type="submit" value="제출">
+</form>
+
+input : 입력버튼
+<form>
+<input type="button" value="계산" onclick="alert('10000원입니다.')">
+</form>
+
+file : 파일 업로드 버튼
+<form>
+<input type="file" accept="image/jpg,image/gif(사용자 지정파일 종류 설정용)"> --> 전부다하고 싶으면 *찍으면됨
+</form>
+
+<입력태그>
+    이메일 : <input type="email" name="email"><br>
+    URL : <input type="url" name="url"><br>
+    전화번호 : <input type="tel" name="tel"><br> -> 사파리8이상만 가능,거의 안씀
+    색상 : <input type="color" name="color"><br>
+    월 : <input type="month" name="month"><br>
+    날짜 : <input type="date" name="date"><br>
+    주 : <input type="week" name="week"><br>
+    시간 : <input type="time" name="time"><br>
+    지역 시간 : <input type="datetime-local" name="localdatetime"><br>
+    숫자 : <input type="number" name="number" min="1" max="10" step="2"><br>
+    범위 : <input type="range" name="range" min="1" max="10" step="2"><br>
+  
+  제출버튼 : <input type="submit" value="제출">
+<button  onclick="alert(다음창에 뜰 내용')">버튼에쓸내용</button> --> submit기능을 수행 
+
+<텍스트박스 만들기>
+<form name="input" action="getfeedback.jsp" method="get">
+위에 적을내용 <br>
+<textarea name="feedback" rows="(몇줄까지 보일지?)" cols="넓이"></textarea>
+</form>
+
+콤보박스(드롭다운리스트)
+<form action="">
+<select name="cars">
+	<option value="bmw">BMW</option>
+	<option value="benz">Benz</option>
+	<option value="hyundai" selected>현대자동차</option>
+	<option value="kia">기아자동차</option>
+</select>
+</form>
+
+<fieldset>
+<form>
+    <fieldset>
+        <legend>인적사항입력</legend>
+        이름:        <input type="text"><br>
+        전화번호:    <input type="text"><br>
+        주소:        <input type="text">
+    </fieldset>
+</form>
+
+<label> <input>요소를 위한 레이블(label)을 정의함
+<form action="proc_form.jsp">
+    <label for="male">남성</label>
+    <input type="radio" name="gender" id="male" value="male"><br> --> 여기서 name이 같으면 ID속성을 통해 서로 연결할 수 있음
+    <label for="female">여성</label>
+    <input type="radio" name="gender" id="female" value="female"><br>
+    <input type="submit" value="제출">
+</form>
+
+HTML 입력 요소
+date 날짜를 입력할 수 있는 컨트롤
+datetime UTC 날짜/시각 형식을 이용한 날짜와 시각 표시 컨트롤
+datetime-local 현지 날짜/시각
+month 월/연도
+time 시각
+week 주와 연도를 선택할 수 있는 컨트롤
+color 색상 코드를 입력할 수 있는 컨트롤
+email 표준 이메일 주소를 입력 받아서 검증하는 컨트롤
+tel 전화번호를 입력 받아서 검증하는 컨트롤
+search 검색어 입력 양식을 생성
+range 2개의 숫자 사이의 숫자를 선택할 수 있는 슬라이더 컨트롤
+number 숫자만 입력 받는 컨트롤
+url URL만 입력 받는 컨트롤
+
+autocomplete – 자동으로 입력을 완성한다. 
+autofocus – 페이지가 로드 되면 자동으로 입력 포커스를 갖는다.
+placeholder – 입력 힌트를 희미하게 보여준다.
+readonly – 읽기 전용 필드
+required – 입력 양식을 제출하기 전에 반드시 채워져 있어야 함을 나타낸다. 
+pattern – 허용하는 입력의 형태를 정규식으로 지정한다. 
+
+이메일 입력
+이메일: <input type="email" name="email" required
+
+전화번호 입력
+<form>
+    전화번호 : <input type="tel" name="tel" required
+        pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}"
+           title="010-1234-1234"><br>
+    <input type="submit" value="Send">
+</form>
+
+숫자입력
+<input type="number" min="230" max="290" step="10" value="260" name="sho">
+
+range 입력 
+<input type="range" min="1" max="10" value="1">
+
+날짜 입력 
+date – 날짜 입력
+month – 월 입력
+week – 주 입력
+time – 시간 입력
+datetime – 날짜와 시간을 입력할 수 있는 양식 제공, 국제 표준 시간대
+datetime-local - 날짜와 시간을 입력할 수 있는 양식 제공, 지역 표준 시간대
+
+<input type="date" name="dob">
+
+색상 입력 
+색상선택: <input type="color" name="color">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

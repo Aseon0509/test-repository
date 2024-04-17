@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="input" enctype="multipart/form-data">
+      <br /><br />
+      <!-- <input type="file" accept="image/jpeg,image/gif,/*,(.hwpx -- 한글 확장자)" /> -->
+      <!-- <form name="input" enctype="multipart/form-data"> 통신규약, 백엔드에서 받으려면 enctype 적어줘야함! -->
+      <input type="hidden" value="hiddenvalue" />
+    </form>
+    <button onclick="alert('안녕하세요?')">눌러보세요!</button>
+    <br /><br />
+    고객의 의견<br />
+    <textarea name="feedback" rows="2" cols="30"></textarea>
+    <br />
+    사용자 아이디:
+    <input type="text" name="user" placeholder="id" />
+    <br />
+    이메일 : <input type="email" required /> <br />
+    전화번호 :
+    <input type="tel" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required />
+    <input type="reset" value="초기화" />
+    <input type="submit" value="제출" />
+    <!-- required 일정 사용 형식을 요구함 -->
+    <!-- alt + 방향키 = 블록친부분 위치이동-->
+    <!-- pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" 정규식이라고 함 -->
+    <!-- placeholder input 창에 흐린글씨 쓰는 태그 -->
+  </body>
+</html>
