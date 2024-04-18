@@ -177,12 +177,14 @@ password : 비밀번호를 입력할 수 있는 한 줄짜리 필드 생성
 
 radio : 라디오 버튼 생성 --> 하나만 선택 가능
 <form>
-    성별:
-    <input type="radio" name="gender" value="male“ >남성
-    <input type="radio" name="gender" value="female">여성
+성별 : <input type="radio" name="gender" id="male" />
+        <lable for="male">남자</lable>
+        <input type="radio" name="gender" id="female" />
+        <lable for="female">여자</lable>
 </form>
 
 checkbox : 체크 박스 생성 --> 여러개 선택 가능
+
 <form>
     과일 선택(내용): 
     <input type="checkbox" name="fruits" value="apple" checked>Apple
@@ -304,6 +306,8 @@ pattern – 허용하는 입력의 형태를 정규식으로 지정한다.
     <input type="submit" value="Send">
 </form>
 
+** require는 이외 다른 컨텐츠 입력시 제출안됨!
+
 숫자입력
 <input type="number" min="230" max="290" step="10" value="260" name="sho">
 
@@ -323,17 +327,47 @@ datetime-local - 날짜와 시간을 입력할 수 있는 양식 제공, 지역 
 색상 입력 
 색상선택: <input type="color" name="color">
 
+alt + 커서 = 여러개 동시 클릭가능
 
+form안에 form은 못만듬!!
 
+글꼴
+serif : 문자 삐침이 있는 글꼴
+san-serif : 문자 삐침이 없는 글꼴 >> 이걸 더 많이 써요
+monospace : 동일한 너비의 글꼴
+cursive : 손으로 쓴것 같은 글꼴
+fantasy : 화려한 글꼴 >> 한글은 적용 안됨, 영어 특문만 적용
 
+눈누 (사이트> 글꼴 다운로드)
 
+"https://cdn.jsdelivr.net >> 여기서 cdn은 폰트 데이터를 잠깐 가져오는것
 
+ctrl + shift + f = 검색기능 >> vscord 안에서만 가능
 
+css단위
+길이나 크기등을 다룰때 사용하는 단위로 px em rem vh %...
+px: 
+픽셀 절대단위, css에서 가장 기본적인 단위이다.
+스크린의 픽셀을 기준으로 한다. 개발할때 잘 안씀
 
+em:
+배수단위이며 해당 글꼴(font)의 기본 크기를 1em으로 놓고 기본크기(부모요소에 font-size)가 없다면 
+웹브라우저의 기본 폰트 사이즈를 기준으로 함)를 1em으로 놓고,
+그에 대한 상대적인 크기를 결정한다. 
 
+%:
+100% = 1em
 
+rem: html 태그를 기준으로 em요소 사용
+emd은 상속관계가 복잡해지면 값을 계산하기 어렵다는 단점이 있다. 
+그래서 기준값을 고정한 상대단위가 나왔는데 그것이 root em -> rem이다
+rem은 루트 요소(html)의 폰트 크기를 기준으로 한다
 
+폰트사이즈의 하한선은 브라우저마다 다름... 확인필요
 
+vh, vw:
+viewport width, viewport height의 약어로 각각 뷰포트의 너비와 높이를 100등분한 단위이다.
+style="with: 10vw; heigbt: 10vh;" -> 전체적인 레이아웃 잡을때 사용
 
 
 
