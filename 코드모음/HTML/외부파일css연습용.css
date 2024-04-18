@@ -1,0 +1,25 @@
+h1 {
+  color: red;
+  font: "bold 3em,sans-serif;";
+}
+h2 {
+  font: "bold 2.5em,sans-serif;";
+}
+h3 {
+  font: "bold 2em,sans-serif;";
+}
+h4 {
+  font: "bold 1.5em", sans-serif;
+}
+
+h5 {
+  font: "bold 1.3em" sans-serif;
+}
+
+h6 {
+  font: "bold 1.25em" sans-serif;
+}
+
+* {
+  text-indent: 10%;
+}

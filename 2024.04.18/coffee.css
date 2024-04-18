@@ -15,7 +15,7 @@ span {
   font-size: 2em;
   color: red;
 }
-em {
+* {
   font-family: "Ownglyph_Dailyokja-Rg";
   font-size: 1.5em;
   color: blue;
