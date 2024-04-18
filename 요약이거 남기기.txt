@@ -369,6 +369,15 @@ vh, vw:
 viewport width, viewport height의 약어로 각각 뷰포트의 너비와 높이를 100등분한 단위이다.
 style="with: 10vw; heigbt: 10vh;" -> 전체적인 레이아웃 잡을때 사용
 
+스타일 적용 우선순위 
+1.important (99999999999점)
+2. inline style (1000점)
+3. id선택자로 작성한것(100점)
+4. class 선택자 (10점)
+5. tag 선택자(1점)
+6. *(전체 선택자)(0점)
+
+ID #, 클래스 .으로 시작
 
 
 
