@@ -370,7 +370,7 @@ viewport width, viewport height의 약어로 각각 뷰포트의 너비와 높�
 style="with: 10vw; heigbt: 10vh;" -> 전체적인 레이아웃 잡을때 사용
 
 스타일 적용 우선순위 
-1.important (99999999999점)
+1. important (99999999999점)
 2. inline style (1000점)
 3. id선택자로 작성한것(100점)
 4. class 선택자 (10점)
@@ -379,11 +379,57 @@ style="with: 10vw; heigbt: 10vh;" -> 전체적인 레이아웃 잡을때 사용
 
 ID #, 클래스 .으로 시작
 
+자손 - 부모(태그)밑으로 전체 다
+자식 - 부모(태그)밑으로 바로 아래 태그 하나만!
 
+ex) body(부모태그) > (자식태그) > (손자태그) -> 손자태그만 녹색 점선으로 변경됨!!
+  body > div > div {border: 3px solid green;}
 
+컨텐츠 영역
 
+(밖)
+마진(영역)
+보더(선)
+패딩(영역)
+컨텐츠(내용)
+패딩
+보더
+마진
 
+의사선택자: 가상선택자라고도 하며 HTMl요소를 직젒 선택하지 않고 
+        요소의 상태에 따라 선택하여 스타일을 적용할 때 사용한다. 
 
+. # 앞에 코드는 명시적으로 적어주는게 좋음!
+
+font 축약시 순서
+style
+weight
+size (필수!),
+family (필수!)
+
+ex)
+    p.style1 {
+      /*style | weight | size | family */
+      font: italic 40px gegrgia, serif;
+      /* style (weight 없음!) size,(필수!) fammily*/
+    }
+
+stac-overflow (찾아보기!)
+
+블록요소<P, div>는 style text-align:방향;으로 변경 가능,
+but inline 요소(ex: span)는 텍스트만 공간을 차지해서 오른쪽으로 변경이 의미 없음
+
+  <style>
+    p.date {
+      text-align: right;
+      color: indigo;
+    }
+  </style>
+  <body>
+    <h1>CSS 텍스트 정렬 예제</h1>
+    <p class="date">2024년 4월 18일</p>
+  </body>
+</html>
 
 
 

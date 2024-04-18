@@ -6,15 +6,17 @@
   font-style: normal;
 }
 
-h1,
-p {
-  font-family: "Ownglyph_Dailyokja-Rg";
+p,
+h1 {
+  font-family: serif;
 }
 span {
+  font-family: "Ownglyph_Dailyokja-Rg";
   font-size: 2em;
   color: red;
 }
 em {
+  font-family: "Ownglyph_Dailyokja-Rg";
   font-size: 1.5em;
   color: blue;
 }
