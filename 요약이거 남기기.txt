@@ -348,6 +348,7 @@ ctrl + shift + f = 검색기능 >> vscord 안에서만 가능
 
 css단위
 길이나 크기등을 다룰때 사용하는 단위로 px em rem vh %...
+
 px: 
 픽셀 절대단위, css에서 가장 기본적인 단위이다.
 스크린의 픽셀을 기준으로 한다. 개발할때 잘 안씀
@@ -371,6 +372,16 @@ vh, vw:
 viewport width, viewport height의 약어로 각각 뷰포트의 너비와 높이를 100등분한 단위이다.
 style="with: 10vw; heigbt: 10vh;" -> 전체적인 레이아웃 잡을때 사용
 
+타입 선택자(type selector) : HTML 요소 이름을 사용 (요소이름{color:red;})
+전체 선택자(universal selector): 페이지 안의 모든 요소를 선택 (* 사용)
+아이디 선택자(id selector):  특정한 요소를 선택 (#(요소이름){color:red;})
+클래스 선택자(class selector)는 클래스가 부여된 요소를 선택한다.  (.(요소이름){color:red;})
+선택자 여러개 필요시 -> 선택자를 콤마(,)로 분리하여 나열할 수 있다. (요소이름,요소이름{color:red;})
+
+**  . # 앞에 코드는 명시적으로 적어주는게 좋음!
+
+ID #, 클래스 .으로 시작
+
 스타일 적용 우선순위 
 1. important (99999999999점)
 2. inline style (1000점)
@@ -379,13 +390,18 @@ style="with: 10vw; heigbt: 10vh;" -> 전체적인 레이아웃 잡을때 사용
 5. tag 선택자(1점)
 6. *(전체 선택자)(0점)
 
-ID #, 클래스 .으로 시작
-
-자손 - 부모(태그)밑으로 전체 다
-자식 - 부모(태그)밑으로 바로 아래 태그 하나만!
+자손 - 부모(태그)밑으로 전체 다 (부모요소 자식요소) ex: body em { color: red; }/* body 안의 em 요소 */
+자식 - 부모(태그)밑으로 바로 아래 태그 하나만! (부모요소 > 자식요소) 
 
 ex) body(부모태그) > (자식태그) > (손자태그) -> 손자태그만 녹색 점선으로 변경됨!!
   body > div > div {border: 3px solid green;}
+
+** 예시
+  <style>
+    div > a[target="_blank"] {
+      background-color: orange;
+    }
+  </style>
 
 컨텐츠 영역
 
@@ -393,15 +409,19 @@ ex) body(부모태그) > (자식태그) > (손자태그) -> 손자태그만 녹�
 마진(영역)
 보더(선)
 패딩(영역)
+
 컨텐츠(내용)
+
 패딩
 보더
 마진
 
-의사선택자: 가상선택자라고도 하며 HTMl요소를 직젒 선택하지 않고 
+의사클래스: 가상클래스라고도 하며 HTMl요소를 직접 선택하지 않고 
         요소의 상태에 따라 선택하여 스타일을 적용할 때 사용한다. 
-
-. # 앞에 코드는 명시적으로 적어주는게 좋음!
+a:link { color: blue; }
+a:visited { color: green; }
+a:hover { color: red; }  //link와 visited뒤에 와야한다
+a:active {color : pink; } //hover 뒤에 와야한다 
 
 font 축약시 순서
 style
@@ -411,16 +431,16 @@ family (필수!)
 
 ex)
     p.style1 {
-      /*style | weight | size | family */
+      style | weight | size | family
       font: italic 40px gegrgia, serif;
-      /* style (weight 없음!) size,(필수!) fammily*/
+      style (weight 없음!) size(필수!), family(필수)
     }
 
-stac-overflow (찾아보기!)
+stac-overflow 외국 개발자 사이트 (찾아보기!)
 
 블록요소<P, div>는 style text-align:방향;으로 변경 가능,
 but inline 요소(ex: span)는 텍스트만 공간을 차지해서 오른쪽으로 변경이 의미 없음
-
+-->> 변경하고 싶으면 
   <style>
     p.date {
       text-align: right;
@@ -433,9 +453,13 @@ but inline 요소(ex: span)는 텍스트만 공간을 차지해서 오른쪽으�
   </body>
 </html>
 
- line-height는 줄간격으로 외우기... 쓸때 px같이 단위 쓰지 않는다. 
-
-선택자 중요!!!!
-
 indent -> 들여쓰기
+
+line-height는 줄간격으로 외우기... 쓸때 px같이 단위 쓰지 않는다. 
+letter-spacing은 글 자 간 격 넓 어 짐 (음수(-) 가능)
+word-spacing 띄어쓰기    간격    넓어짐 (음수(-) 가능) 
+text-indent    들여쓰기 (블록도 설정안됨, 빈칸임)
+span같은 내용 정렬 필요시 블록요소로 싸서 내부 요소 정리 가능
+uppercase -> 소문자->대문자로 변환
+text-shadow: 0px(x축 이동) 0px(y축 이동) (5px- 없어도됨!) (색상지정 안해도됨, 안하면 검정)
 
