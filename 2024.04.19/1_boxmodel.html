@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxmodel</title>
+  </head>
+  <style>
+    /* box-sizing, content box 속성
+    content box: 정해준 width, height 값은 화면상에서 그대로 표핸되지 않고 
+    paddingrhk border 영역을 포함하여 화면에 표현된다 (default)
+    border-box: 정해준 width, height 값이 화면상에서 그대로 표현된다.*/
+    * {
+      box-sizing: border-box;
+    }
+    /* 영역 맞추기 위해 맞추고 시작 */
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 15px;
+    }
+    div {
+      /* div는 블록요소이므로 widthm height 값을 조정할 수 있다. */
+      width: 490px;
+      height: 490px;
+      border: 5px solid red;
+      /* padding: 15px; */
+      /* margin: 15px; */
+    }
+    /* 실제 우리 눈에 보이는 사이즈는 border까지!! 
+    ex: 500*500 만드려면 W,H 490 border 5여야함
+    html은 마진까지 전부 포함, 그 아래 요소(body)는 모든 컨텐츠를 포함하지는 않음.*/
+  </style>
+  <body>
+    <div></div>
+  </body>
+</html>
