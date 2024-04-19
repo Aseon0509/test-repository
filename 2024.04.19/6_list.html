@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>liststyle</title>
+  </head>
+  <style>
+    ul {
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+      padding: 5px 0;
+      text-align: center;
+      /* list-style-type: none; */
+      /* list-style-image: url(../resources/img/check.png); */
+      /* 크기조정 불가능...  */
+      /* 인라인요소는 정렬 불가능, list를 정렬하고 싶다면 부모태그인 ul에서 정렬해야함 
+      알고리즘
+      정렬할 내용 확인
+      정렬할 내용 부모태그 확인*/
+    }
+    ul li {
+      display: inline;
+      text-transform: uppercase;
+      padding: 0 10px;
+      letter-spacing: 9px;
+    }
+    ul li a {
+      text-decoration: none;
+      color: black;
+    }
+    ul li a:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+  </style>
+  <body>
+    <!-- <ul>
+      <li>
+        <img src="../resources/img/check.png" width="16" height="16" />
+        아메리카노
+      </li>
+      <li>아이스티</li>
+      <li>자몽허니블랙티</li>
+    </ul> -->
+    <!-- 플래티콘(아이콘 다운로드 사이트) -->
+    <ul>
+      <li><a href="./6_list.html" target="_blank">blog</a></li>
+      <li><a href="./6_list.html" target="_blank">about</a></li>
+      <li><a href="./6_list.html" target="_blank">contact</a></li>
+      <li><a href="./6_list.html" target="_blank">home</a></li>
+    </ul>
+  </body>
+</html>
