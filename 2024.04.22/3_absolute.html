@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>absolute</title>
+  </head>
+  <style>
+    #one {
+      background-color: aquamarine;
+      width: 800px;
+      height: 400px;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      /* left top static에서는 의미 ㄴㄴ */
+    }
+    #two {
+      background-color: yellow;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      /* left: 100px;
+      top: 100px; */
+    }
+    /* 가장 가까운 포지셔닝이 지정된(중요!) 조상 기준으로 움직임,
+    없으면 body(브라우저)기준으로 움직인다.
+    absolute는 문서의 일반적인 흐름을 타지 않기 때문에 요소의 순서에서 제외,
+    문서의 흐름을 지키는 녀석이 앞으로 온다.
+    기준 잘찾기!!!!*/
+    #three {
+      background-color: greenyellow;
+      width: 300px;
+      height: 100px;
+      position: absolute;
+      left: 200px;
+      top: 200px;
+    }
+  </style>
+  <body>
+    <div id="one">
+      <div id="two">block #2<br />position: absolute;</div>
+    </div>
+    <div id="three"></div>
+  </body>
+</html>

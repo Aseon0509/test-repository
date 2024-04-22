@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>releative</title>
+  </head>
+  <style>
+    #one {
+      background-color: aquamarine;
+      width: 300px;
+      height: 100px;
+      position: static;
+      left: 100px;
+      top: 100px;
+      /* left top static에서는 의미 ㄴㄴ */
+    }
+    #two {
+      background-color: yellow;
+      width: 300px;
+      height: 100px;
+      position: relative;
+      left: 350px;
+      top: -115px;
+    }
+    #three {
+      background-color: greenyellow;
+      width: 300px;
+      height: 100px;
+    }
+  </style>
+  <body>
+    <p id="one">block #1</p>
+    <div id="two">block #2<br />position: relative;</div>
+    <p id="three">block #3</p>
+  </body>
+</html>
