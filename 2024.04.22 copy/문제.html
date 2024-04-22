@@ -12,26 +12,27 @@
     body {
       margin: 0;
     }
-    div {
+    p {
       background-color: bisque;
       width: 100px;
       height: 100px;
       border: 3px solid blue;
       align-items: center;
+      justify-content: center;
       flex-grow: 1;
-      text-align: center;
+      display: flex;
     }
-    #container {
+    div {
       display: flex;
       background-color: aquamarine;
-      flex-wrap: nowrap;
       width: 500px;
       height: 500px;
     }
     #one {
       align-self: flex-start;
-      justify-content: center;
-      align-items: center;
+    }
+    #two {
+      align-self: center;
     }
     #three {
       align-self: flex-end;
@@ -39,10 +40,10 @@
   </style>
   <body>
     <h1>1. 아래와 같이 만들어보세요</h1>
-    <div id="container">
-      <div id="one">1</div>
-      <div id="two">2</div>
-      <div id="three">3</div>
+    <div>
+      <p id="one">1</p>
+      <p id="two">2</p>
+      <p id="three">3</p>
     </div>
   </body>
 </html>
