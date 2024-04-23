@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      display: flex;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+    #header {
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-grow: 1;
+    }
+    #main {
+      border: 3px solid red;
+      display: flex;
+      flex-grow: 6;
+    }
+    footer {
+      display: flex;
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #상단버튼들 {
+      display: flex;
+    }
+    #리스트 {
+      display: flex;
+      list-style: none;
+    }
+    #하단광고 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #회사리스트 > ul {
+      display: flex;
+      list-style: none;
+      letter-spacing: 1px;
+    }
+    #footer광고 {
+      display: space-evenly;
+      justify-content: center;
+      align-items: center;
+      text-indent: 1em;
+    }
+    ul > a:link {
+      list-style-type: none;
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div>
+        <input
+          type="image"
+          src="../resources/img/네이버3.png"
+          alt="우측 3"
+          width="50em;"
+          height="50em;"
+        />
+        <input
+          type="image"
+          src="../resources/img/우상단 네이버페이.png"
+          alt="우상단 네이버페이"
+          width="50em;"
+          height="50em;"
+        />
+      </div>
+      <div id="header">
+        <div>
+          <div id="검색창">
+            <form action="https://search.naver.com/search.naver">
+              <input
+                type="text"
+                name="검색"
+                placeholder="검색어를 입력하세요"
+              />
+              <button type="submit">검색</button>
+            </form>
+          </div>
+          <div id="상단버튼들">
+            <ul id="리스트">
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  width="30em;"
+                  height="30em;"
+                  alt="메일"
+                /><a href="#"></a>
+                <br />
+                메일
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="카페"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                카페
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="블로그"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"> </a>
+                <br />
+                블로그
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="지식in"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                지식in
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="쇼핑"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                쇼핑
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="뉴스"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                뉴스
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="증권"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                증권
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="부동산"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                부동산
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="지도"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                지도
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="웹툰"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                웹툰
+              </li>
+              <li>
+                <input
+                  type="image"
+                  src="../resources/img/멍뭉이.jpg"
+                  alt="치지직"
+                  width="30em;"
+                  height="30em;"
+                /><a href="#"></a>
+                <br />
+                치지직
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="layoutleft">
+          <div id="뉴스"></div>
+          <div id="쇼핑"></div>
+          <div id="피드"></div>
+        </div>
+        <div id="layoutright">
+          <div id="로그인"></div>
+          <div id="광고"></div>
+          <div id="날씨"></div>
+          <div id="증시"></div>
+          <div id="우광고2"></div>
+          <div id="위젯보드"></div>
+          <div id="우광고3"></div>
+        </div>
+      </div>
+      <div id="footer">
+        <div id="하단광고">
+          <input
+            type="image"
+            src="../resources/img/우주사진.jpg"
+            alt="우상단 네이버페이"
+            width="130em;"
+            height="130em;"
+          />
+          <div id="footer광고">
+            <input type="button" value="네이버 커넥트재단" />
+            <br />
+            <strong>부스트캠프 AI tech</strong>
+            <p>
+              1초만에 알람 신청하고<br />
+              7기 모집을 놓치지 마세요
+            </p>
+          </div>
+          <input
+            type="image"
+            src="../resources/img/우주사진.jpg"
+            alt="한국문화재재단"
+            width="130em;"
+            height="130em;"
+          />
+          <div id="footer광고">
+            <input type="button" value="한국문화재재단" />
+            <br />
+            <strong>2024 봄 궁중문화축전</strong>
+            <p>
+              4월 27일 ~ 5월 5일<br />
+              함께한 궁중문화 함깨할 국가유산
+            </p>
+          </div>
+          <input
+            type="image"
+            src="../resources/img/우주사진.jpg"
+            alt="새 학기 체험학습 특별전"
+            width="130em;"
+            height="130em;"
+          />
+          <div id="footer광고">
+            <input type="button" value="네이버 예약" />
+            <br />
+            <strong>새 학기 체험학습 특별전</strong>
+            <p>역사, 문화, 과학, 진로 재밌게 체험하며 공부하자!</p>
+          </div>
+        </div>
+        <div id="공지사항"></div>
+        <div id="하단링크">
+          <div id="파트너스"></div>
+          <div id="developers"></div>
+        </div>
+        <div id="회사리스트">
+          <ul>
+            <li><a href="#">&nbsp;회사소개&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;인재채용&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;제휴제안&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;이용약관&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;개인정보처리방침&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;청소년보호정책&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;네이버정책&nbsp;</a></li>
+            <li>&verbar;</li>
+            <li><a href="#">&nbsp;고객센터&nbsp;</a></li>
+            <li>&verbar;</li>
+            <strong>NAVER corp.</strong>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
