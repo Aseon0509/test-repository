@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #one {
+      display: flex;
+      flex-direction: column;
+      border: 5px solid blue;
+      height: 100%;
+      flex-grow: 1;
+    }
+    #head {
+      display: flex;
+      background-color: #ffff00;
+      flex-grow: 1;
+      justify-content: center;
+      text-align: center;
+      border-radius: 50px;
+      margin: 10px;
+    }
+    #main {
+      display: flex;
+      flex-grow: 3;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+    #foot {
+      display: flex;
+      background-color: #9999e6;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      margin: 10px;
+    }
+    #nav {
+      display: flex;
+      border: 2px solid #e69999;
+      flex-grow: 1;
+      text-align: center;
+      display: block;
+      background-color: #e69999;
+      border-radius: 50px;
+      padding: 10px;
+      margin: 10px;
+      height: 100%;
+    }
+    #content {
+      display: flex;
+      display: block;
+      background-color: #99e6e6;
+      border-radius: 50px;
+      flex-grow: 3;
+      padding: 10px;
+      margin: 10px;
+      height: 100%;
+    }
+    body > div > div > div > div {
+      border: 3px dotted yellowgreen;
+      background-color: #9ed7c2;
+      border-radius: 50px;
+      margin: 15px;
+      height: 45%;
+      margin: 10px;
+      padding: 30px;
+    }
+    #w3:link {
+      text-decoration: none;
+      color: white;
+    }
+    #naver:link {
+      text-decoration: none;
+      color: yellow;
+    }
+    #daum:link {
+      text-decoration: none;
+      color: yellow;
+    }
+    #w3:visited {
+      text-decoration: none;
+      color: white;
+    }
+    #naver:visited {
+      text-decoration: none;
+      color: yellow;
+    }
+    #daum:visited {
+      text-decoration: none;
+      color: yellow;
+    }
+  </style>
+  <body>
+    <div id="one">
+      <div id="head">
+        <div>
+          <h1>MY Blog page</h1>
+          <p>시멘틱 태그로 만들어진 페이지 입니다</p>
+        </div>
+      </div>
+      <div id="main">
+        <div id="nav">
+          <h3>links</h3>
+          <ul>
+            <li>
+              <a id="w3" href="https://www.w3.org/" target="_blank"
+                >W3schools</a
+              >
+            </li>
+            <li>
+              <a id="naver" href="https://www.naver.com/" target="_blank"
+                >Naver</a
+              >
+            </li>
+            <li>
+              <a id="daum" href="https://www.daum.net/" target="_blank">daum</a>
+            </li>
+          </ul>
+          <img src="../resources/img/멍뭉이.jpg" width="50px" height="50px" />
+          <p>멍뭉이</p>
+        </div>
+        <div id="content">
+          <div id="semantic">
+            <h3>Semantic Tags</h3>
+            <h4>
+              시멘틱 요소 &#34;Semantic elements&#34;들은 브라우저에게 요소의
+              의미나 목적을 명확하게 알려주는 요소이다. 레이아웃을 만들때 쓰는
+              것. 의미가 있는 요소라면 div보다는 시멘틱 태그를 사용해준다.
+            </h4>
+          </div>
+          <div id="divspan">
+            <h3>div와 span</h3>
+            <h4>
+              div는 &#34;divide&#34;의 약자로서 페이지를 논리적인 섹션으로
+              분리하는데 사용되는 태그이다. span요소는 인라인 요소로서 텍스트를
+              위한 컨테이너로 사용 할 수 있다
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div id="foot">copyright &#40;c&#41; 2019 Hong</div>
+    </div>
+  </body>
+</html>

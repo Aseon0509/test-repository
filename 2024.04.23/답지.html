@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃예제2 답지</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    #header {
+      background-color: #ffff00;
+    }
+    #main {
+      background-color: aqua;
+    }
+    #footer {
+      background-color: ;
+    }
+    #nav {
+      background-color: #e69999;
+      flex-grow: 1;
+    }
+    #content {
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <h1>My blog page</h1>
+        <p>DIV와 flex로 만들어진 페이지입니다.</p>
+      </div>
+      <div id="main">
+        <div id="nav"></div>
+        <div id="content"></div>
+      </div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
