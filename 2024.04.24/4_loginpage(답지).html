@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ㅏㅐ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+    html,
+    body,
+    #wrapper {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      color: #c4c3ca;
+    }
+    #wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #main {
+      width: 500px;
+      height: 500px;
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+    }
+    h3 {
+      margin: 50px;
+      text-align: center;
+    }
+    #input-section {
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #inputsection div {
+    }
+    #forgetpassword {
+      height: 10%;
+    }
+    #input-section div {
+      width: 90%;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="main">
+        <h3>Log in</h3>
+        <div>
+          <div>
+            <form>
+              <div id="input-section">
+                <div>
+                  <i id="two" class="fas fa-wine-glass-alt"></i>
+                  <input type="text" placeholder="Your Email" />
+                </div>
+                <div>
+                  <i id="two" class="fas fa-wine-glass-alt"></i>
+                  <input type="password" placeholder="Your Password" />
+                </div>
+              </div>
+              <input type="submit" value="submit" />
+            </form>
+          </div>
+          <div id="forgetpassword">
+            <a href="#">forget your password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>컴퓨터 쇼핑몰</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    Html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    #wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    #heading {
+      border: 3px solid red;
+      flex-grow: 1;
+    }
+    #banner {
+      border: 3px solid pink;
+    }
+    #list {
+      border: 3px solid;
+    }
+    #main {
+      border: 3px solid red;
+      flex-grow: 3;
+      display: flex;
+    }
+    #main > div {
+      border: 3px solid green;
+    }
+    #navleft {
+      width: 15%;
+    }
+    #inmain {
+      width: 70%;
+    }
+    #navright {
+      width: 15%;
+    }
+
+    #footer {
+      border: 3px solid red;
+      flex-grow: 1;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="heading">
+        <div id="banner"></div>
+        <div id="list"></div>
+      </div>
+      <div id="main">
+        <div id="navleft"></div>
+        <div id="inmain"></div>
+        <div id="navright"></div>
+      </div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
