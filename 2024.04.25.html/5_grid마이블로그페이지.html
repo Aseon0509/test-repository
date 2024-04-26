@@ -20,7 +20,7 @@
     }
     #wrapper {
       display: grid;
-      background-color: bisque;
+      /* background-color: bisque; */
       grid-template-columns: 200px 1fr;
       grid-template-rows: 1fr 3fr 1fr;
       grid-template-areas:
@@ -28,35 +28,74 @@
         "aside main"
         "footer footer";
       gap: 10px;
-      margin: 10px;
+      margin-bottom: 10px;
     }
     #header {
-      background-color: yellow;
+      background-color: #f5ebe0;
       grid-area: header;
       border-radius: 30px;
       display: grid;
-      align-items: center;
+      text-align: center;
       justify-content: center;
+      align-items: center;
+    }
+    #header > h1 {
+      height: 50%;
+      justify-self: center;
+      margin-top: 3%;
+      margin-bottom: 0;
+    }
+    #header > p {
+      margin-top: 0%;
+      margin-bottom: 12%;
     }
     #aside {
-      background-color: palevioletred;
+      background-color: #e3d5ca;
       grid-area: aside;
       border-radius: 30px;
       padding: 5% 15%;
     }
     #aside > ul {
-      /* display: flex;
-      flex-direction: column; */
       display: grid;
-      padding: 5% 10%;
+      padding: 10% 5%;
+      padding-top: 1%;
+      padding-left: 25%;
     }
     #aside > div {
       display: grid;
       justify-items: center;
       font-weight: 600;
     }
+    #W3school {
+      color: white;
+      text-decoration: none;
+    }
+    #Naver {
+      color: yellow;
+      text-decoration: none;
+    }
+    #daum {
+      color: yellow;
+      text-decoration: none;
+    }
+    #W3school:hover {
+      color: black;
+      text-decoration: none;
+      letter-spacing: 10%;
+      letter-spacing: 3px;
+    }
+    #Naver:hover {
+      color: black;
+      text-decoration: none;
+      letter-spacing: 3px;
+    }
+    #daum:hover {
+      color: black;
+      text-decoration: none;
+      letter-spacing: 3px;
+    }
     #main {
-      background-color: aquamarine;
+      background-color: #edede9;
       grid-area: main;
       display: grid;
       grid-template-columns: 1fr;
@@ -69,15 +108,17 @@
       padding: 5% 5%;
     }
     #footer {
-      background-color: blueviolet;
+      background-color: #d5bdaf;
       grid-area: footer;
       border-radius: 30px;
       display: grid;
       align-items: center;
       justify-content: center;
+      font-weight: 600;
     }
     #semantic {
-      background-color: aliceblue;
+      background: #f5ebe0;
+      border: 3px dotted black;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -88,7 +129,8 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
-      background-color: aliceblue;
+      background-color: #f5ebe0;
+      border: 3px dotted black;
       border-radius: 30px;
       padding: 3% 5%;
     }

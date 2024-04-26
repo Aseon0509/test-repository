@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+    html,
+    body,
+    #wrapper {
+      width: 100%;
+      height: 100%;
+    }
+    /* transition
+    css 프로퍼티의 값이 변화할 때 프로퍼티 값의 변화가 
+    일정시간(duration)에 걸쳐 일어나도록 하는 것이다.  
+    상태 변화에 동반하여 변경되는 CSS프로퍼티 값에 의한 표시의 변화를 
+    부드럽게 하기 위해 애니메이션 속도를 조절한다.*/
+
+    /* 모든 css프로퍼티가 transition의 대상이 될 수는 없다. 
+    예를들어 width font-size, background-color처럼 하나의 범주안에서 크기나 색상의 값이 변화가 가능하지만 
+    display 프로퍼티 등의 범주가 애매한 속성들은 적용할 수 없다*/
+
+    /* div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition-property: width, background-color;
+      transition-duration: 2s, 2s;
+    } */
+
+    /* 초기 상태, transition은 초기상태에 적용! */
+
+    /* div:hover {
+      width: 400px;
+      background-color: blue;
+    } */
+
+    /* 마우스를 올렸을 때 적용될 상태 */
+    #wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    #one {
+      width: 100px;
+      height: 20%;
+      background-color: red;
+      transition-property: width, background-color;
+      transition-duration: 2s, 2s;
+    }
+    /* 초기 상태, transition은 초기상태에 적용! */
+    #one:hover {
+      width: 200px;
+      background-color: blue;
+    }
+    #two {
+      width: 100px;
+      height: 20%;
+      background-color: red;
+      transition-property: width, background-color;
+      transition-duration: 2s, 2s;
+    }
+    /* 초기 상태, transition은 초기상태에 적용! */
+    #two:hover {
+      width: 400px;
+      background-color: blue;
+    }
+    #three {
+      width: 100px;
+      height: 20%;
+      background-color: red;
+      transition-property: width, background-color;
+      transition-duration: 2s, 2s;
+    }
+    /* 초기 상태, transition은 초기상태에 적용! */
+    #three:hover {
+      width: 400px;
+      background-color: blue;
+    }
+    #four {
+      width: 100px;
+      height: 20%;
+      background-color: red;
+      transition-property: width, background-color;
+      transition-duration: 2s, 2s;
+    }
+    /* 초기 상태, transition은 초기상태에 적용! */
+    #four:hover {
+      width: 400px;
+      background-color: blue;
+    }
+    #five {
+      width: 100px;
+      height: 20%;
+      background-color: red;
+      transition-property: width, background-color;
+      transition-duration: 2s, 2s;
+    }
+    /* 초기 상태, transition은 초기상태에 적용! */
+    #five:hover {
+      width: 400px;
+      background-color: blue;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+      <div id="four"></div>
+      <div id="five"></div>
+      <div id="six"></div>
+      <div id="seven"></div>
+    </div>
+  </body>
+</html>

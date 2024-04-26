@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      margin: 0%;
+    }
+    #wrapper {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 220px 1fr 200px;
+      grid-template-rows: 100px 70px 4fr 1fr;
+      grid-template-areas:
+        "header header header"
+        "header2 header2 header2"
+        "aside1 main aside2"
+        "footer footer footer";
+      gap: 10px;
+    }
+    #header {
+      background-color: #f5f5f5;
+      grid-area: header;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    #header2 {
+      height: 70%;
+      background-color: #f5f5f5;
+      border-top: 3px dotted #a3a345;
+      border-bottom: 3px solid #a3a345;
+      grid-area: header2;
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    #header2 a {
+      width: 10px;
+      color: #2a2af0;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #header2 a:visited {
+      color: #2a2af0;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    #header2 a:hover {
+      width: 30px;
+      color: black;
+      letter-spacing: 10%;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    #aside1 {
+      background-color: #525d76;
+      grid-area: aside1;
+      padding-top: 15%;
+    }
+    #aside1 ul {
+      list-style-type: none;
+      padding-left: 0%;
+    }
+    #aside1 li {
+      width: 100%;
+      background-color: #6d7996;
+      color: white;
+      border: 1px solid #4a546a;
+      padding: 7px;
+      padding-left: 15px;
+    }
+    #aside1 a {
+      text-decoration: none;
+    }
+    #aside1 a:visited {
+      width: 100%;
+      background-color: #6d7996;
+      color: white;
+      border: 1px solid #4a546a;
+      text-decoration: none;
+      padding: 7px;
+      padding-left: 15px;
+    }
+    #aside1 a:hover {
+      width: 100%;
+      background-color: #6d7996;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 10px;
+      padding: 7px;
+      padding-left: 15px;
+    }
+    #main {
+      grid-area: main;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #main > div {
+      border: 1px solid #6d7996;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 30%;
+      max-width: 33%;
+      /* 최대 최소값을 잡아주고, flex-wrap을 넣어서 3개 이상 div추가하기! */
+      /* flex-grow: 1; */
+    }
+    #main > div > img {
+      height: 70%;
+    }
+    .main > a > p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #main > div > p {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-content: center;
+    }
+    #aside2 {
+      background-color: #e2e0d7;
+      grid-area: aside2;
+      padding: 10%;
+    }
+    #aside2 h3 {
+      margin: 0;
+    }
+    #footer {
+      background-color: black;
+      color: white;
+      grid-area: footer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <img
+          src="../resources/img/컴퓨터사진03.jpg"
+          width="100px"
+          height="90px"
+        />
+        <p>Web shopping</p>
+      </div>
+      <ul id="header2">
+        <li class="list">
+          <a href="https://www.google.com/" target="_blank">home</a>
+        </li>
+        <li class="list">
+          <a href="https://www.google.com/">shopping about</a>
+        </li>
+        <li class="list">
+          <a href="https://www.google.com/" target="_blank">news</a>
+        </li>
+        <li class="list">
+          <a href="https://www.google.com/" target="_blank">my account</a>
+        </li>
+        <li class="list">
+          <a href="https://www.google.com/" target="_blank">contacts</a>
+        </li>
+      </ul>
+      <div id="aside1">
+        <ul>
+          <li><a href="https://www.google.com/" target="_blank">컴퓨터</a></li>
+          <li><a href="https://www.google.com/" target="_blank">의류</a></li>
+          <li><a href="https://www.google.com/" target="_blank">음악</a></li>
+          <li><a href="https://www.google.com/" target="_blank">영화</a></li>
+          <li>
+            <a href="https://www.google.com/" target="_blank">스포츠/레저</a>
+          </li>
+          <li>
+            <a href="https://www.google.com/" target="_blank">가구/인테리어</a>
+          </li>
+          <li><a href="https://www.google.com/" target="_blank">식품</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <div class="main">
+          <a
+            href="http://127.0.0.1:5501/2024.04.26/grid%EC%87%BC%ED%95%91%EB%AA%B0.html"
+            target="_blank"
+            ><p>
+              <img
+                src="../resources/img/컴퓨터사진03.jpg"
+                width="150px"
+                height="150px"
+              />
+            </p>
+            <p>
+              Bossmonster GTX63 T9X7Q16 (인텔 13세대 i9 RTX4070 16인치 240Hz
+              게이밍/영상편집/노트북)
+            </p></a
+          >
+          <div class="button-section">
+            <button>쇼핑카트에 추가하기</button>
+          </div>
+        </div>
+        <div class="main">
+          <a
+            href="http://127.0.0.1:5501/2024.04.26/grid%EC%87%BC%ED%95%91%EB%AA%B0.html"
+            target="_blank"
+            ><p>
+              <img
+                src="../resources/img/컴퓨터사진03.jpg"
+                width="150px"
+                height="150px"
+              />
+            </p>
+            <p>
+              Bossmonster GTX63 T9X7Q16 (인텔 13세대 i9 RTX4070 16인치 240Hz
+              게이밍/영상편집/노트북)
+            </p></a
+          >
+          <div class="button-section">
+            <button>쇼핑카트에 추가하기</button>
+          </div>
+        </div>
+        <div class="main">
+          <a
+            href="http://127.0.0.1:5501/2024.04.26/grid%EC%87%BC%ED%95%91%EB%AA%B0.html"
+            target="_blank"
+            ><p>
+              <img
+                src="../resources/img/컴퓨터사진03.jpg"
+                width="150px"
+                height="150px"
+              />
+            </p>
+            <p>
+              Bossmonster GTX63 T9X7Q16 (인텔 13세대 i9 RTX4070 16인치 240Hz
+              게이밍/영상편집/노트북)
+            </p></a
+          >
+          <div class="button-section">
+            <button>쇼핑카트에 추가하기</button>
+          </div>
+        </div>
+        <div class="main">
+          <a
+            href="http://127.0.0.1:5501/2024.04.26/grid%EC%87%BC%ED%95%91%EB%AA%B0.html"
+            target="_blank"
+            ><p>
+              <img
+                src="../resources/img/컴퓨터사진03.jpg"
+                width="150px"
+                height="150px"
+              />
+            </p>
+            <p>
+              Bossmonster GTX63 T9X7Q16 (인텔 13세대 i9 RTX4070 16인치 240Hz
+              게이밍/영상편집/노트북)
+            </p></a
+          >
+
+          <div class="button-section">
+            <button>쇼핑카트에 추가하기</button>
+          </div>
+        </div>
+      </div>
+      <div id="aside2">
+        <h3>Shopping Cart</h3>
+        <p>현재 쇼핑카트에 물품이 없습니다.</p>
+        <a href="#"></a>
+        <a
+          href="http://127.0.0.1:5501/2024.04.26/grid%EC%87%BC%ED%95%91%EB%AA%B0.html"
+          target="_blank"
+          >쇼핑카트 보기</a
+        >
+        <h3>Log In</h3>
+        <span>아이디</span><br />
+        <span><input type="text" /></span>
+        <span>패스워드</span><br />
+        <span><input type="password" /></span>
+        <p>
+          <input type="submit" value="로그인" />
+          <input type="reset" value="초기화" />
+        </p>
+        <p><a href="#">회원가입</a> <a href="#">비밀번호 분실</a></p>
+      </div>
+      <div id="footer">copyright (c) YU</div>
+    </div>
+  </body>
+</html>
