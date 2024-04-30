@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>buttons</title>
+    <title>Document</title>
   </head>
   <style>
     * {
@@ -21,9 +21,6 @@
     #wrapper {
       padding: 1rem;
     }
-    .btn-3d {
-      position: relative;
-    }
     a {
       display: inline-block;
       font-size: 22px;
@@ -31,49 +28,55 @@
       color: white;
       border-radius: 6px;
       text-decoration: none;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    }
+    .btn-3d {
+      position: relative;
+      /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15); */
     }
     .btn-3d.green {
       background-color: #82c8a0;
-      box-shadow: 0 0 0px 1px #82c8a0 inset,
-        0 0 10px 2px rgba(255, 255, 255, 0.15) inset,
+      box-shadow: 0 0 0 1px #82c8a0 inset,
+        0 0 0 2px rgba(255, 255, 255, 0.15) inset,
         0 8px 0 0 rgba(126, 194, 155, 0.7), 0 8px 0 1px rgba(0, 0, 0, 0.4),
         0 8px 8px 1px rgba(0, 0, 0, 0.5);
     }
     .btn-3d.green:hover {
       background-color: #80c49d;
     }
-    .btn-3d:active {
-      top: 9px;
-    }
     .btn-3d.green:active {
       box-shadow: 0 0 0 1px #82c8a0 inset,
         0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
     }
+    .btn-3d:active {
+      top: 9px;
+    }
+
     .orange {
       background-color: #ffaa40;
     }
     .btnFade.orange:hover {
-      background-color: #ff8300;
       transition: all 0.2s;
+      background-color: #ff8300;
     }
+
     .purple {
       background-color: #a74982;
     }
     .btnBorder.purple {
-      box-shadow: 0 0 0 0 #6d184d;
+      box-shadow: 0 0 0 0 #6d184b;
     }
     .btnBorder.purple:hover {
-      box-shadow: 0 0 0 5px #6d184d;
       transition: all 0.2s;
+      box-shadow: 0 0 0 5px #6d184b;
     }
+
     .skyblue {
       background-color: #4ec0e9;
     }
-    .clickme {
-      animation: clickme 4s 1;
+    .clickMe {
+      animation: clickMe 4s infinite;
     }
-    @keyframes clickme {
+    @keyframes clickMe {
       5% {
         transform: scale(1);
       }
@@ -99,63 +102,66 @@
         transform: scale(1.15) rotate(0);
       }
       50% {
-        transform: scale(1) rotate(0);
+        transform: scale(1);
       }
     }
+
+    .purpleBlue {
+    }
     .gradient {
+      /* background-color: #e0e5ec; */
       background-color: transparent;
-      /* 부모 컬러를 그대로 받아옴 */
       position: relative;
       overflow: hidden;
       box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.5) inset,
         7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     }
     .gradient::after {
-      content: "";
+      content: '';
       position: absolute;
+      z-index: -1;
       width: 100%;
       height: 100%;
-      left: 0;
       top: 0;
-      z-index: -1;
+      left: 0;
+      background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
       border-radius: 6px;
-      background-image: linear-gradient(315deg, #1fd1f9 10%, #b621fe 74%);
       transition: all 0.3s ease;
-      overflow: hidden;
     }
     .gradient:hover::after {
       transform: scale(2) rotate(180deg);
     }
+
     .openBtn {
       border: 2px solid #4dbde5;
       color: #4dbde5;
       position: relative;
-      transition: 3s ease;
+      transition: 0.3s;
     }
     .openBtn::before {
-      content: "";
+      content: '';
       display: inline-block;
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #4dbde5;
+      background: #4dbde5;
       transform: scaleX(0);
+      transition: 0.3s;
       z-index: -1;
-    }
-    .openBtn:hover::before {
-      transition: 3s ease;
-      transform: scaleX(1);
     }
     .openBtn:hover {
       color: white;
+    }
+    .openBtn:hover::before {
+      transform: scaleX(1);
     }
   </style>
   <body>
     <div id="wrapper">
       <div class="content">
-        <h2>3d button</h2>
+        <h2>3D button</h2>
         <a href="#" class="btn-3d green">Button</a>
       </div>
       <div class="content">
@@ -163,20 +169,20 @@
         <a href="#" class="btnFade orange">Fade</a>
       </div>
       <div class="content">
-        <h2>border button</h2>
+        <h2>Border button</h2>
         <a href="#" class="btnBorder purple">Border</a>
       </div>
       <div class="content">
         <h2>click me button</h2>
-        <a href="#" class="clickme skyblue">click me</a>
+        <a href="#" class="clickMe skyblue">Click me</a>
       </div>
       <div class="content">
         <h2>gradient button</h2>
-        <a href="#" class="gradient purpleblue">Gradient</a>
+        <a href="#" class="gradient purpleBlue">Gradient</a>
       </div>
       <div class="content">
         <h2>open button</h2>
-        <a href="#" class="openBtn">open button</a>
+        <a href="#" class="openBtn">Open</a>
       </div>
     </div>
   </body>

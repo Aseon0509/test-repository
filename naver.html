@@ -13,59 +13,69 @@
       margin: 0;
     }
     html,
-    body,
-    #wrapper {
+    body {
       width: 100%;
       height: 100%;
     }
-    #wrapper {
-      border: 3px solid red;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 4fr 1fr;
-      grid-template-areas:
-        "header header"
-        "main main"
-        "footer footer";
+    .pulse-button {
+      display: none;
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      border: 2px solid rgb(14, 135, 199);
+      box-shadow: 0 0 0 0 rgba(14, 135, 199, 0.7);
+      background: white;
+      cursor: pointer;
+      -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 7);
+      -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 7);
+      -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 7);
+      animation: pulse 1.25s infinite cubic-bezier(0.7, 0, 0, 7);
     }
-    #header {
-      border: 3px solid red;
-      grid-area: header;
+    .pulse-button:hover,
+    .pulse-button.focus {
+      margin: 0;
+      color: #e8f5ce;
+      border: 2px solid #2c539e;
+      -webkit-animation: none;
+      -moz-animation: none;
+      -ms-animation: none;
+      animation: none;
+      background: #2c539e;
     }
-    #main {
-      border: 3px solid red;
-      grid-area: main;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1%;
+
+    @-webkit-keyframes pulse {
+      to {
+        box-shadow: 0 0 0 45px rgba(255, 76, 61, 0);
+      }
     }
-    #footer {
-      border: 3px solid red;
-      grid-area: footer;
+
+    @-moz-keyframes pulse {
+      to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+      }
     }
-    #aside1 {
-      grid-area: aside1;
-      border: 3px solid red;
-      width: 100%;
-      height: 100%;
+
+    @-ms-keyframes pulse {
+      to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+      }
     }
-    #aside2 {
-      grid-area: aside2;
-      border: 3px solid red;
-      width: 100%;
-      height: 100%;
+
+    @keyframes pulse {
+      to {
+        box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+      }
     }
   </style>
   <body>
-    <div id="wrapper">
-      <div id="header"></div>
-      <div id="main">
-        <div id="inner-grid">
-          <div id="aside1"></div>
-          <div id="aside2"></div>
-        </div>
-      </div>
-      <div id="footer"></div>
+    <div class="wrap">
+      <div class="pulse-button"></div>
+      <!-- .pulse-button end -->
     </div>
+    <!-- .wrap end -->
   </body>
 </html>
