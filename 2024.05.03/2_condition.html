@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문</title>
+  </head>
+  <body>
+    <script>
+      let year = 0;
+      year = +prompt("올해는 몇년도 입니까?");
+      // + 문자열 -> 숫자열로 표시
+      // prompt로 받은 자료는 문자형!
+      //   if (year == 2020) {
+      //     alert("현재 연도는 2020년 입니다.");
+      //   }
+      //   if (year == 2024) {
+      //     alert("현재 연도는 2024년 입니다.");
+      //   }
+      //== 동등비교 연산자,=== 일치비교연산자(type 까지 같이)
+
+      // falsy : 0, "", null, undefinde, NaN ...
+      // trusy한 값을 쓰면 인정됨 ex: if(2024) --> 그냥 실행됨
+
+      //   if (year == 2023) {
+      //     alert("현재 연도는 2023년 입니다.");
+      //   } else if (year == 2024) {
+      //     alert("현재 연도는 2024년 입니다.");
+      //   } else if (year == 2022) {
+      //     alert("현재 연도는 2022년 입니다.");
+      //   } else {
+      //     alert("잘못 입력하셨습니다.");
+      //   } // else문만 못씀
+      switch (year) {
+        case 2022:
+          alert("현재 연도는 2022년 입니다.");
+          break;
+        case 2023:
+          alert("현재 연도는 2023 입니다.");
+          break;
+        case 2024:
+          alert("현재 연도는 2024 입니다.");
+          break;
+        default:
+          alert("잘못 입력하셨습니다.");
+          break;
+      }
+
+      // switch의 케이스를 비교할 때는 동등비교가 아닌 일치비교를 한다.
+    </script>
+  </body>
+</html>
