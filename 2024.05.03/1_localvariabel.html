@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지역변수</title>
+  </head>
+  <body>
+    <script>
+      let sum; //--> 초기화(최초할당)
+      let num = 0; // 전역변수
+      function showalert() {
+        sum = 0; //--> 할당(선언이후)
+        let message; // 지역변수
+        alert(num);
+      }
+      //   alert(window.sum);
+      alert(message);
+
+      // 함수 표현식
+      const func = function () {};
+
+      // 함수 이외에 블록 안에서 선언된 변수는 다 지역변수,
+      // 함수 없어도 지역변수 만들수 있음
+      // 초기화 (값)할당이 다름 초기화는 선언시 발동
+      // 선언 이후에 값을 주는 경우 값할당이 됨
+      alert(message);
+    </script>
+  </body>
+</html>
