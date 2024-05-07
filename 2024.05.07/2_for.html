@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      for (i = 0; i < 10; i++) {
+      for (let i = 0; i < 10; i++) {
         document.write(`<h1>카운터 : ${i}</h1>`);
       }
       document.write(`<hr>`);
@@ -44,6 +44,36 @@
         }
       }
       document.write(`<h1>${result}</h1>`);
+      document.write(`<hr>`);
+      // 중첩반복문(nestied loop)
+      let i = 0;
+      if (i % 2 == 0) {
+        if (i == 2) {
+          alert("i는 2입니다.");
+        } else {
+          ("i는 2가 아닙니다.");
+        }
+      }
+
+      document.write(`<hr>`);
+
+      for (i = 0; i < 10; i++) {
+        document.write(`<h1>i 반복문 ${i}회차 시작</h1>`);
+        for (let j = 0; j < 10; j++) {
+          document.write(`<h1>j 반복문 ${j}회차 시작</h1>`);
+          document.write(`<h1>j 반복문 ${j}회차 끝</h1>`);
+        }
+        document.write(`<h1>i 반복문 ${i}회차 끝</h1>`);
+      }
+
+      document.write(`<hr>`);
+
+      for (i = 2; i < 10; i++) {
+        document.write(`<h1>${i}단 시작</h1>`);
+        for (j = 1; j < 10; j++) {
+          document.write(`<h1>${i} * ${j} = ${i * j}</h1>`);
+        }
+      }
     </script>
   </body>
 </html>
