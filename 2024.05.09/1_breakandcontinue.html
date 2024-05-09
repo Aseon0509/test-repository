@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break And Continue</title>
+  </head>
+  <body>
+    <script>
+      document.write(`<h1>&lt;break&gt;</h1>`);
+      for (let i = 0; i > 10; i++) {
+        if (i == 3) {
+          break;
+          //  가장 가까운 반복문을 끝냄, 이경우는 for문, 주로 while문에서 쓰임
+        }
+        document.write(`<h3>${i}</h3>`);
+      }
+
+      document.write(`<hr>`);
+
+      let j = 0;
+      while (true) {
+        document.write(`<h2>${j}</h2>`);
+        j++;
+        if (j == 5) {
+          break;
+        }
+      }
+
+      document.write(`<br>`);
+
+      document.write(`<h1>&lt;continue&gt;</h1>`);
+
+      for (let i = 0; i < 10; i++) {
+        if (i == 3) {
+          continue;
+          // 가장 가까운 반복문의 해당 회차만 종결, 다음 회차는 돌아간다.
+        }
+        document.write(`<h3>${i}</h3>`);
+      }
+
+      j = 0;
+      while (true) {
+        document.write(`<h3>${j}</h3>`);
+        j++;
+        if (stage == 5) {
+          continue;
+        }
+        if (stage >= 11) {
+          break;
+        }
+      }
+
+      for (let i = 0; i <= 10; i++) {
+        if (i % 2 == 1) {
+          continue;
+        }
+        document.write(`<h2>${i}</h2>`);
+        if (i % 2 == 0) {
+          document.write(`<h2>${i}</h2>`);
+        }
+      }
+    </script>
+  </body>
+</html>
