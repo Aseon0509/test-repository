@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 아래 배열의 마지막에 "banana" 를 추가 후 반환하세요.
+      const arr = ["apply", "pie", "fig", "melon", "pear", "peach"];
+      function solution1(arr) {
+        arr.push("banana");
+        return arr[arr.length - 1];
+      }
+
+      // 함수 실행 코드
+      console.log(solution1(arr));
+
+      // ---------------------------------------------------------------
+
+      //2. 아래 배열의 처음에 "banana"를 추가 후 반환하세요.
+      const arr2 = ["apply", "pie", "fig", "melon", "pear", "peach"];
+
+      function solution2(inputValue) {
+        arr.unshift("banana");
+        return arr[0];
+      }
+
+      // 함수 실행 코드
+      console.log(solution2(arr2));
+
+      // ---------------------------------------------------------------
+
+      //3. 입력 받은 배열의 길이를 반환하는 함수를 작성하여 배열의 길이를 출력하세요.
+      const arr3 = ["apply", "pie", "fig", "melon", "pear", "peach"];
+
+      function solution3(inputValue) {
+        return inputValue.length;
+      }
+
+      // 함수 실행 코드
+      console.log(solution3(arr3));
+
+      // ---------------------------------------------------------------
+
+      //4. 입력 받은 배열의 마지막 값을 제거(삭제)후 반환하세요.
+      const arr4 = ["apply", "pie", "fig", "melon", "pear", "peach"];
+
+      function solution4(arr4) {
+        arr4.pop();
+        return arr4;
+      }
+
+      // 함수 실행 코드
+      console.log(solution4(arr4));
+
+      // ---------------------------------------------------------------
+
+      //5. 입력 받은 배열의 첫번째 값을 제거(삭제) 후 반환하세요.
+      const arr5 = ["apply", "pie", "fig", "melon", "pear", "peach"];
+
+      function solution5(inputValue) {
+        inputValue.shift(-1);
+        return arr5;
+      }
+
+      // 함수 실행 코드
+      console.log(solution5(arr5));
+
+      // ---------------------------------------------------------------
+
+      //6. 입력 받은 배열을 참조하여 ["pie", "fig", "melon"] 배열을 반환하세요.
+      const arr6 = ["apply", "pie", "fig", "melon", "pear", "peach"];
+
+      function solution6(inputValue) {
+        const arr7 = arr6.slice(1, 4);
+        return arr7;
+      }
+
+      // 함수 실행 코드
+      console.log(solution6(arr6)); // ["pie", "fig", "melon"] 나와야함
+      console.log(arr6 == solution6(arr6)); // false 나와야함
+      // ---------------------------------------------------------------
+
+      //7. 입력받은 2개의 배열을 합쳐서 반환하세요.
+      const arr8 = ["apply", "pie", "fig"];
+      const arr9 = ["melon", "pear", "peach"];
+
+      function solution7(inputValue1, inputValue2) {
+        const concatArr = arr.concat();
+        return concatArr;
+      }
+
+      // 함수 실행 코드
+      console.log(solution7(arr8, arr9));
+    </script>
+  </body>
+</html>
